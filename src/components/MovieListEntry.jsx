@@ -1,5 +1,5 @@
 var MovieListEntry = (props) => (
-  <div className="movie-list-entry" onClick={() => props.clickHandler(props.movie)}>
+  <div className="movie-list-entry">
     <div className="media-body">
       <div className="movie-list-entry-title">{props.movie.title}</div>
     </div>

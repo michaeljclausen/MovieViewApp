@@ -10,15 +10,24 @@ class App extends React.Component {
         return movie;
       }
     });
-
     this.setState({listed: listed});
+  }
 
+  addMovie(input) {
+    if (!movies.title.includes(input)) {
+      let movies = this.state.movies;
+      movies.push({title: input});
+      this.setState({movies : movies});
+    }
+    $('.add-movie-control').val('');
   }
 
   render() {
     return (
       <div>
         <div className="col-md-7">
+          <h2>Movie List</h2>
+          <AddMovie clickHandler={this.addMovie.bind(this)}/>
           <Search clickHandler={this.handleSearchClick.bind(this)}/>
           <MovieList movies={this.state.listed}/>
         </div>

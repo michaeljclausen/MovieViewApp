@@ -14,12 +14,12 @@ body {
   width: 50px;
 }
 
-.search-bar {
+.search-bar .add-movie{
   border-radius: 1px;
   background: #fff;
 }
 
-.search-bar .form-control {
+.search-bar .form-control .add-movie-control {
   border-radius: 2px;
   width: 80%
 }

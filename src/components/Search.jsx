@@ -1,9 +1,9 @@
 var Search = (props) => {
   return (
   <div className="search-bar form-inline">
-    <input className="form-control" type="text" />
+    <input className="form-control" type="text" placeholder="Search..."/>
     <button className="btn hidden-sm-down" onClick={() => props.clickHandler($('.form-control').val())}>
-      <span className="glyphicon glyphicon-search"></span>
+    <span className="glyphicon glyphicon-search"></span>
     </button>
   </div> 
   );
