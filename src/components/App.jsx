@@ -17,7 +17,7 @@ class App extends React.Component {
     if (!movies.title.includes(input)) {
       let movies = this.state.movies;
       movies.push({title: input});
-      this.setState({movies : movies});
+      this.setState({movies: movies});
     }
     $('.add-movie-control').val('');
   }
