@@ -2,7 +2,7 @@ var AddMovie = (prop) => {
   return (
   <div className="add-movie" >
     <input className="add-movie-control" type="text" placeholder="Add movie titles here"/>
-    <button className="btn" onClick={() => prop.clickHandler($('.add-movie-control').val())}>Add Movie</button>
+    <button className="btn add-btn" onClick={() => prop.clickHandler($('.add-movie-control').val())}>Add Movie</button>
   </div>
   );
 };

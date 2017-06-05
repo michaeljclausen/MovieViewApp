@@ -1,7 +1,7 @@
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { movies: movies, listed: movies };
+    this.state = { movies: movies, listed: movies, watchButton: 'toWatch'};
   }
 
   handleSearchClick(input) {
@@ -28,6 +28,8 @@ class App extends React.Component {
         <div className="col-md-7">
           <h2>Movie List</h2>
           <AddMovie clickHandler={this.addMovie.bind(this)}/>
+          <button className="btn">Watched</button>
+          <button className="btn clicked">To Watch</button>
           <Search clickHandler={this.handleSearchClick.bind(this)}/>
           <MovieList movies={this.state.listed}/>
         </div>
