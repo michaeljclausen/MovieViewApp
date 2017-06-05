@@ -1,14 +1,26 @@
 var MovieList = (props) => {
-  return (
-    <div>
-      <h2>MovieList</h2>
+  if (props.movies.length > 0) {
+    return (
       <div>
-        {props.movies.map((movie, index) => (
-          <MovieListEntry movie={movie} key={index} />
-        ))}
+        <h2>MovieList</h2>
+        <div>
+          {props.movies.map((movie, index) => (
+            <MovieListEntry movie={movie} key={index} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div>
+        <h2>MovieList</h2>
+        <div>
+          No matching movies.
+        </div>
+      </div>
+    );
+  }
+ 
 };
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated

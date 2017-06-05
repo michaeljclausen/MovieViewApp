@@ -1,14 +1,26 @@
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { movies: movies };
+    this.state = { movies: movies, listed: movies };
+  }
+
+  handleSearchClick(input) {
+    let listed = this.state.movies.filter(movie => {
+      if (movie.title.toUpperCase().startsWith(input.toUpperCase())) {
+        return movie;
+      }
+    });
+
+    this.setState({listed: listed});
+
   }
 
   render() {
     return (
       <div>
         <div className="col-md-7">
-          <MovieList movies={this.state.movies}/>
+          <Search clickHandler={this.handleSearchClick.bind(this)}/>
+          <MovieList movies={this.state.listed}/>
         </div>
       </div>
     );
